@@ -1,0 +1,91 @@
+:root {
+  --primary: #2e8b57;
+  --bg: #f4f6f4;
+  --card: #ffffff;
+  --text: #170101;
+  --radius: 10px;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --card:black;
+  --text:#f1f1f1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:url(a.jpg.jpg) no-repeat center/cover; /*var(--bg);*/
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(45deg, #2e8b57, #7ed957);
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Form */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.animate {
+  animation: fadeIn 1s ease;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+  nav {
+    text-align: center;
+  }
+}
+ .footer{
+  background: rgba(46,139,87,0.8);   /* semi transparent green */
+  backdrop-filter: blur(8px);        /* blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
